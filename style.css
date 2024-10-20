@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+}
+
+#nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+#nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.gola{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+#nav-part2 h4{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Gilroy', calibri;
+}
+#nav-part2 h5{
+    display: none;
+}
+
+#nav-part2 h4 span{
+    color: rgb(128, 124, 124);
+    font-family: 'Gilroy', calibri;
+    margin-left: 25px;
+}
+
+#nav2{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 80px;
+    /*background-color: red;*/
+}
+#nav2 h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Gilroy', calibri;
+    font-weight: 600;
+}
+
+#content{
+    width: 100%;
+    height: calc(100% - 120px);
+   /*  background-color: aqua;*/
+}
+
+#text-content{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+#text-content::-webkit-scrollbar{
+    background-color: transparent;
+    height: 7px;
+}
+#text-content::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+.elem{
+    width: 60%;
+    height: 100%;
+    flex-shrink: 0;
+    font-family: 'Gilroy', calibri;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elem h1{
+   /* font-size: 130px;*/
+    font-size: 7vw;
+    font-weight: 200;
+    font-family: 'Gilroy', calibri;
+}
+
+#image-content{
+    width: 100%;
+    height: 60%;
+    /*background-color: rebeccapurple;*/
+    display: flex;
+    overflow-x: auto;
+}
+#image-content::-webkit-scrollbar{
+    display: none;
+}
+
+#image-content img{
+    flex-shrink: 0;
+    width: 100%;
+    height: 99%;
+    background-size: cover;
+    object-fit: cover;
+} 
+
+
+
+@media (max-width:600px) {
+    
+    #nav{
+        height: 70px;
+        padding: 0 25px;
+    }
+    #nav-part1{
+        gap: 0px;
+    }
+    .gola{
+        width: 16px;
+        height: 16px;
+        background-color: black;
+        border-radius: 50%;
+    }
+    #nav-part2{
+        align-items: center;
+        gap: 50px;
+    }
+    #nav-part2 h4{
+        display: none;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'Gilroy', calibri;
+    }
+
+    #nav-part2 h4:nth-child(1){
+        display: initial;
+        margin-right: 25px;
+    }
+    #nav-part2 h5{
+        display: initial;
+    }
+
+    #nav-part2 h5 i{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    #nav-part2 h4 span{
+        color: rgb(128, 124, 124);
+        font-family: 'Gilroy', calibri;
+        margin-left: 10px;
+    }
+    
+    #nav2{
+        width: 100%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        gap: 10px;
+        /*background-color: red;*/
+    }
+    #nav2 h3{
+        font-size: 2.5vw;
+        text-transform: uppercase;
+        font-family: 'Gilroy', calibri;
+        font-weight: 500;
+        color: #727070;
+    }
+    
+    #content{
+        width: 100%;
+        height: calc(100% - 115px);
+       /*  background-color: aqua;*/
+    }
+    
+    #text-content{
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    #text-content::-webkit-scrollbar{
+        background-color: transparent;
+        height: 4px;
+    }
+    #text-content::-webkit-scrollbar-thumb{
+        background-color: orangered;
+    }
+    .elem{
+        width: fit-content;
+        height: 100%;
+        flex-shrink: 0;
+        font-family: 'Gilroy', calibri;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+    
+    .elem h1{
+       /* font-size: 130px;*/
+        font-size: 24vw;
+        font-weight: 200;
+        white-space: nowrap;
+        font-family: 'Gilroy', calibri;
+    }
+    
+    #image-content{
+        width: 100%;
+        height: 65%;
+        /*background-color: rebeccapurple;*/
+        display: flex;
+        overflow-x: auto;
+    }
+    #image-content::-webkit-scrollbar{
+        display: none;
+    }
+    
+    #image-content img{
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    } 
+    #image-content img:nth-child(3){
+        object-position: left;
+    }
+}
